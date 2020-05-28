@@ -1,3 +1,45 @@
-body {
-color: black;
+
+
+.container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: repeat(3, 1fr);
+  height: 120vh;
+  grid-template-areas:
+    "top top top"
+	"mid mid mid"
+    "left left left";
 }
+
+
+
+.top {
+  grid-area: top;
+  display: flex;
+  background-color: blue;
+ 
+}
+
+.left {
+  grid-area: left;
+  display: flex;
+  background-color: red;
+
+  
+}
+
+.mid {
+  grid-area: mid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  font-size: 30px;
+  background-color: green;
+  
+ 
+}
+
+
+

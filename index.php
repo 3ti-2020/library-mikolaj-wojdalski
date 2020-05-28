@@ -1,13 +1,20 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <title>Tabela</title>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
     <div class="container">
-  
-    <div class="main">
-    <?php
+      <div class="item top">	
+      </div>
+	    
+      <div class="item left">
+      </div>
+	  
+        <div class="item mid">
+<?php
     $servername = "127.0.0.1";
     $username = "root";
     $password = "";
@@ -18,7 +25,7 @@
     $result = $conn->query("SELECT id_x,imię, nazwisko, tytul, ISBN FROM x, autorzy, tytuły WHERE x.id_autor=autorzy.id_autor AND x.id_tytul=tytuły.id_tytul");
 
     echo("<table>");
-	echo("<table border='2'>");
+	echo("<table border='5'>");
     echo("<tr>
     <th>id_x</th>
     <th>imię</th>
@@ -45,8 +52,11 @@
         echo("</tr>");
     }
     echo("</table>");
-    ?>
+?>
+				
+		</div>
     </div>
-    </div> 
-</body>
+
+  </body>
+
 </html>
